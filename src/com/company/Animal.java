@@ -11,12 +11,10 @@ public class Animal {
 
     public Animal(String species) {
         this.species = species;
-        if (species.equals("dog")) {
-            this.weight = DEFAULT_DOG_WEIGHT;
-        } else if (species.equals("mouse")) {
-            this.weight = DEFAULT_MOUSE_WEIGHT;
-        } else if (species.equals("cat")) {
-            this.weight = DEFAULT_CAT_WEIGHT;
+        switch (species) {
+            case "dog" -> this.weight = DEFAULT_DOG_WEIGHT;
+            case "mouse" -> this.weight = DEFAULT_MOUSE_WEIGHT;
+            case "cat" -> this.weight = DEFAULT_CAT_WEIGHT;
         }
     }
 
@@ -37,5 +35,8 @@ public class Animal {
         } else {
             System.out.println("He is already dead");
         }
+    }
+    public String toString(){
+        return name+ " is a "+ species+ " and weights "+ weight+ " kg";
     }
 }
