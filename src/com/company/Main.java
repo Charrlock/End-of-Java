@@ -12,7 +12,9 @@ public class Main {
         Bro.pet.takeForAWalk();
         Bro.pet.takeForAWalk();
 
+        Car car = new Car("328i", "BMW", 1999, "blue");
 
+        System.out.println(car);
 
     }
 }

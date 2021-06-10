@@ -24,18 +24,17 @@ public class Animal {
         if (weight > 0) {
             this.weight += 0.1;
             System.out.println("Your pet " + name + " weights now " + weight + "kg");
-        }
-        else{
+        } else {
             System.out.println("He is already dead");
         }
     }
+
     public void takeForAWalk() {
         if (weight > 0) {
             this.weight -= 0.1;
             System.out.println("Your pet " + name + " did some running and weights now " + weight + "kg");
 
-        }
-        else{
+        } else {
             System.out.println("He is already dead");
         }
     }
