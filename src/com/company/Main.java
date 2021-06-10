@@ -16,5 +16,9 @@ public class Main {
 
         System.out.println(car);
 
+
+        Bro.setSalary(3000.0);
+        Bro.setSalary(4500.0);
+        System.out.println(Bro.getSalary());
     }
 }
