@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ThirteenTasks:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ThirteenTasks_jar</output-path>
+    <root id="archive" name="ThirteenTasks.jar">
+      <element id="module-output" name="ThirteenTasks" />
+    </root>
+  </artifact>
+</component>
