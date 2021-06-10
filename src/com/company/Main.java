@@ -20,5 +20,9 @@ public class Main {
         Bro.setSalary(3000.0);
         Bro.setSalary(4500.0);
         System.out.println(Bro.getSalary());
+
+        Bro.setCar(car);
+        System.out.println(Bro.firstName+ " has a car, and it is a freaking " +Bro.getCar());
+
     }
 }

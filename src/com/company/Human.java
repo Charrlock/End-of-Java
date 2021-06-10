@@ -6,6 +6,7 @@ public class Human {
     public String lastName;
     private Double salary;
     private String salarySettingDate = "Never";
+    private Car car;
 
     public String getSalarySettingDate(){
         return salarySettingDate;
@@ -34,5 +35,22 @@ public class Human {
         }
     }
 
+    public Car getCar() {
+        return this.car;
+    }
+
+    public void setCar(Car car) {
+        if(salary>car.value) {
+            System.out.println("Car bought outright (for money).");
+            this.car = car;
+        }
+        else if(salary>car.value/12){
+            System.out.println("Car bought by a loan.");
+            this.car = car;
+        }
+        else{
+            System.out.println("You can not afford a car right now, get an education, a job or ask for a raise.");
+        }
+    }
 
 }

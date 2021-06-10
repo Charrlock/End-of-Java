@@ -6,6 +6,7 @@ public class Car {
     final int year;
     public String color;
     public boolean isWorking = true;
+    public double value;
 
 
     public Car(String model, String producer, int year, String color) {
