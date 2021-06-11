@@ -25,7 +25,7 @@ public class Main {
         System.out.println(Bro.getSalary());
 
         Bro.setCar(car);
-        System.out.println(Bro.firstName+ " has a car, and it is a freaking " +Bro.getCar());
+        System.out.println(Bro.firstName + " has a car, and it is a freaking " + Bro.getCar());
 
         Car car2 = new Car("360 spyder", "Ferrari", 2005, "Red");
         Car car3 = new Car("360 spyder", "Ferrari", 2005, "Red");
@@ -33,8 +33,14 @@ public class Main {
         System.out.println(Bro.pet);
         System.out.println(Bro);
 
-        Phone nokia = new Phone("6310i", "Nokia", 2000);
-        System.out.println(nokia);
+        Phone nokia1 = new Phone("6310i", "Nokia", 2000);
+        System.out.println(nokia1);
+        Bro.setSalary(1000.0);
+        Bro.setCar(car3);
+        System.out.println(car3.value);
+
+        nokia1.turnOn();
+        car3.turnOn();
 
     }
 }

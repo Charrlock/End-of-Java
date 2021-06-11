@@ -3,11 +3,11 @@ package com.company;
 public class Animal {
     public String name;
     final String species;
-    private Double weight;
+    private double weight;
 
-    public static final Double DEFAULT_DOG_WEIGHT = 10.0;
-    public static final Double DEFAULT_MOUSE_WEIGHT = 0.1;
-    public static final Double DEFAULT_CAT_WEIGHT = 5.0;
+    public static final double DEFAULT_DOG_WEIGHT = 10.0;
+    public static final double DEFAULT_MOUSE_WEIGHT = 0.1;
+    public static final double DEFAULT_CAT_WEIGHT = 5.0;
 
     public Animal(String species) {
         this.species = species;
@@ -36,7 +36,8 @@ public class Animal {
             System.out.println("He is already dead");
         }
     }
-    public String toString(){
-        return name+ " is a "+ species+ " and weights "+ weight+ " kg";
+
+    public String toString() {
+        return name + " is a " + species + " and weights " + weight + " kg";
     }
 }

@@ -6,7 +6,7 @@ public class Human {
     public Animal pet;
     public String firstName;
     public String lastName;
-    private Double salary;
+    private double salary;
     private String salarySettingDate = "Never";
     private Car car;
 
@@ -18,11 +18,11 @@ public class Human {
         this.salarySettingDate = "Just now";
     }
 
-    public Double getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(Double salary) {
+    public void setSalary(double salary) {
         if (salary < 0) {
             System.out.println("Your income cannot be making you poorer man");
         } else {
@@ -54,7 +54,7 @@ public class Human {
     }
 
     public String toString() {
-        return firstName + " " + lastName + " his salary is "+ salary + " and his pet name is "+ pet.name;
+        return firstName + " " + lastName + " his salary is " + salary + " and his pet name is " + pet.name;
     }
 
 }
