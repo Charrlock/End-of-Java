@@ -20,6 +20,6 @@ public class Phone extends Device {
 
     @Override
     public void sell(Human seller, Human buyer, double price) {
-        System.out.println("Sprzedano telefon");
+        System.out.println("Phone sold");
     }
 }

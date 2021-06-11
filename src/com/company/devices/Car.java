@@ -25,6 +25,6 @@ public class Car extends Device {
 
     @Override
     public void sell(Human seller, Human buyer, double price) {
-        System.out.println("Sprzedano telefon");
+        System.out.println("You have sold the phone");
     }
 }

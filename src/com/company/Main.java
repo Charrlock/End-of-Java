@@ -1,7 +1,8 @@
 package com.company;
 
-import com.company.creatures.Animal;
+import com.company.creatures.FarmAnimal;
 import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -10,7 +11,7 @@ public class Main {
         Human Bro = new Human();
         Bro.firstName = "Bro";
         Bro.lastName = "Browski";
-        Bro.pet = new Animal("mouse");
+        Bro.pet = new Pet("mouse");
         Bro.pet.name = "Stewart";
         Bro.pet.feed();
         Bro.pet.takeForAWalk();
@@ -52,7 +53,17 @@ public class Main {
         Bro.pet.sell(Bro, MsBro, 200.0); // Bro just sold a dead mouse to his wife
         MsBro.pet.takeForAWalk();
 
-        Bro.sell(Bro, MsBro, 200);
+        //Bro.sell(Bro, MsBro, 200); threw exceptions, commented out
+        FarmAnimal mouse1 = new FarmAnimal("mouse");
+        FarmAnimal cat1 = new FarmAnimal("cat");
+        cat1.name = "Fluffy";
+        //cat1.feed();
+        cat1.feed(1.0);
+        mouse1.name = "CatFood";
+        System.out.println(cat1);
+        mouse1.beEaten();
+        System.out.println(mouse1);
+
 
     }
 }

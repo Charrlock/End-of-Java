@@ -65,4 +65,8 @@ public class Human extends Animal {
         return firstName + " " + lastName; // removed because not everybody has a pet
     }
 
+    @Override
+    public void feed(double foodWeight) {
+        this.weight += foodWeight;
+    }
 }

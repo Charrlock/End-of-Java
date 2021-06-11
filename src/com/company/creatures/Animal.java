@@ -1,8 +1,9 @@
 package com.company.creatures;
 
+import com.company.feedable;
 import com.company.salleable;
 
-public class Animal implements salleable {
+public abstract class Animal implements salleable, feedable {
     public String name;
     final String species;
     double weight;
@@ -19,10 +20,20 @@ public class Animal implements salleable {
             case "cat" -> this.weight = DEFAULT_CAT_WEIGHT;
         }
     }
-
+    @Override
     public void feed() {
         if (weight > 0) {
             this.weight += 0.1;
+            System.out.println("Your pet " + name + " weights now " + weight + "kg");
+        } else {
+            System.out.println("He is already dead");
+        }
+    }
+
+    @Override
+    public void feed(double foodWeight) {
+        if (weight > 0) {
+            this.weight += foodWeight;
             System.out.println("Your pet " + name + " weights now " + weight + "kg");
         } else {
             System.out.println("He is already dead");
