@@ -1,9 +1,11 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal {
+import com.company.salleable;
+
+public class Animal implements salleable {
     public String name;
     final String species;
-    private double weight;
+    double weight;
 
     public static final double DEFAULT_DOG_WEIGHT = 10.0;
     public static final double DEFAULT_MOUSE_WEIGHT = 0.1;
@@ -39,5 +41,21 @@ public class Animal {
 
     public String toString() {
         return name + " is a " + species + " and weights " + weight + " kg";
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, double price) throws Exception {
+        if (this instanceof Human)
+            throw new Exception("It is not possible to sell people anymore.");
+        else if ((buyer.cash > price) && (seller.pet != null)) {
+            buyer.cash -= price;
+            seller.cash += price;
+            System.out.println("You sold your pet " + seller.pet.name + " for " + price + " to " + buyer);
+            buyer.pet = seller.pet;
+            seller.pet = null;
+        } else {
+            System.out.println("You can't afford that buy right now.");
+        }
+
     }
 }

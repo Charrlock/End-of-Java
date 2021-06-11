@@ -1,14 +1,22 @@
-package com.company;
+package com.company.creatures;
 
 import com.company.devices.Car;
 
-public class Human {
+public class Human extends Animal {
     public Animal pet;
     public String firstName;
     public String lastName;
     private double salary;
     private String salarySettingDate = "Never";
     private Car car;
+    public double cash;
+    public final static Double DEFAULT_HUMAN_WEIGHT = 3.0; //when you are born
+
+    public Human() {
+        super("Homo Sapiens");
+        weight = DEFAULT_HUMAN_WEIGHT;
+    }
+
 
     public String getSalarySettingDate() {
         return salarySettingDate;
@@ -54,7 +62,7 @@ public class Human {
     }
 
     public String toString() {
-        return firstName + " " + lastName + " his salary is " + salary + " and his pet name is " + pet.name;
+        return firstName + " " + lastName; // removed because not everybody has a pet
     }
 
 }

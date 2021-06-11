@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.creatures.Human;
+
 public class Car extends Device {
 
     public String color;
@@ -21,4 +23,8 @@ public class Car extends Device {
         System.out.println("The " + this.producer + " is turning on with a *Wrooom*");
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, double price) {
+        System.out.println("Sprzedano telefon");
+    }
 }

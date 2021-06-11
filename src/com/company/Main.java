@@ -1,10 +1,12 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Human Bro = new Human();
         Bro.firstName = "Bro";
         Bro.lastName = "Browski";
@@ -41,6 +43,16 @@ public class Main {
 
         nokia1.turnOn();
         car3.turnOn();
+
+        Human MsBro = new Human();
+        MsBro.firstName = "MsBro";
+        MsBro.lastName = "Browska";
+        Bro.cash = 300.0;
+        MsBro.cash = 300.0;
+        Bro.pet.sell(Bro, MsBro, 200.0); // Bro just sold a dead mouse to his wife
+        MsBro.pet.takeForAWalk();
+
+        Bro.sell(Bro, MsBro, 200);
 
     }
 }
