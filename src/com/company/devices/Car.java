@@ -2,12 +2,13 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
     public String color;
     public boolean isWorking = true;
     public double value = 10000.0;
 
+    public abstract void refuel();
 
     public Car(String model, String producer, int year, String color) {
         super(model, producer, year);

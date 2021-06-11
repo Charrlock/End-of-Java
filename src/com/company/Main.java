@@ -4,7 +4,12 @@ import com.company.creatures.FarmAnimal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.Diesel;
 import com.company.devices.Phone;
+import com.company.devices.Electric;
+import com.company.devices.LPG;
+
+import java.net.URL;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -18,7 +23,7 @@ public class Main {
         Bro.pet.takeForAWalk();
         Bro.pet.takeForAWalk();
 
-        Car car = new Car("328i", "BMW", 1999, "blue");
+        Car car = new Diesel("328i", "BMW", 1999, "blue");
 
         System.out.println(car);
 
@@ -30,8 +35,8 @@ public class Main {
         Bro.setCar(car);
         System.out.println(Bro.firstName + " has a car, and it is a freaking " + Bro.getCar());
 
-        Car car2 = new Car("360 spyder", "Ferrari", 2005, "Red");
-        Car car3 = new Car("360 spyder", "Ferrari", 2005, "Red");
+        Car car2 = new Diesel("360 spyder", "Ferrari", 2005, "Red");
+        Car car3 = new Diesel("360 spyder", "Ferrari", 2005, "Red");
         System.out.println(car2.equals(car3));
         System.out.println(Bro.pet);
         System.out.println(Bro);
@@ -63,6 +68,24 @@ public class Main {
         System.out.println(cat1);
         mouse1.beEaten();
         System.out.println(mouse1);
+        Car diesel1 = new Diesel("test1", "test1", 2000, "blue");
+        Car electric1 = new Electric("test2", "test2", 2000, "white");
+        Car lpg1 = new LPG("test3", "test3", 2000, "black");
+
+        diesel1.turnOn();
+        diesel1.refuel();
+        electric1.turnOn();
+        electric1.refuel();
+        lpg1.turnOn();
+        lpg1.refuel();
+
+        nokia1.installAanApp("http://www.example.com/docs/resource1.html");
+        nokia1.installAanApp("egg", "egg");
+        nokia1.installAanApp("egg", "egg", "egg");
+        URL url = new URL(" http://www.example.com/docs/resource1.html");
+        nokia1.installAanApp(url);
+
+
 
 
     }
