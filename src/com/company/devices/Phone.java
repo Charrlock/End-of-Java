@@ -48,4 +48,6 @@ public class Phone extends Device {
     public void installAanApp(URL url) {
         System.out.println("Installing an app from a link");
     }
+
+
 }

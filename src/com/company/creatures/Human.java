@@ -1,6 +1,10 @@
 package com.company.creatures;
 
+import com.company.SortByYear;
 import com.company.devices.Car;
+
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Human extends Animal {
     public Animal pet;
@@ -8,15 +12,37 @@ public class Human extends Animal {
     public String lastName;
     private double salary;
     private String salarySettingDate = "Never";
-    private Car car;
+    public Car[] garage;
     public double cash;
-    public final static Double DEFAULT_HUMAN_WEIGHT = 3.0; //when you are born
+    public final static double DEFAULT_HUMAN_WEIGHT = 3.0; //when you are born
+    public final static int DEFAULT_GARAGE = 2;
 
     public Human() {
         super("Homo Sapiens");
         weight = DEFAULT_HUMAN_WEIGHT;
+        this.garage = new Car[DEFAULT_GARAGE];
     }
 
+    public Human(int garage) {
+        super("Homo Sapiens");
+        weight = DEFAULT_HUMAN_WEIGHT;
+        this.garage = new Car[garage];
+    }
+
+    public double garageValue() {
+        double sum = 0;
+        for (Car car : garage) {
+            if (car != null) {
+                sum += car.value;
+
+            }
+        }
+        return sum;
+    }
+
+    public void sort_Garage() {
+        Arrays.sort(garage, new SortByYear());
+    }
 
     public String getSalarySettingDate() {
         return salarySettingDate;
@@ -45,17 +71,21 @@ public class Human extends Animal {
         }
     }
 
-    public Car getCar() {
-        return this.car;
+    public Car getCar(int spot) {
+        return garage[spot];
     }
 
-    public void setCar(Car car) {
-        if (salary > car.value) {
+    public void setCar(Car car, int spot) {
+        if (car == null) {
+            garage[spot] = null;
+            System.out.println("Car removed from spot no " + spot);
+        }
+        else if (salary > car.value) {
             System.out.println("Car bought outright (for money).");
-            this.car = car;
+            garage[spot] = car;
         } else if (salary > car.value / 12) {
             System.out.println("Car bought by a loan.");
-            this.car = car;
+            garage[spot] = car;
         } else {
             System.out.println("You can not afford a car right now, get an education, a job or ask for a raise.");
         }

@@ -5,7 +5,8 @@ import com.company.salleable;
 public abstract class Device implements salleable {
     final String model;
     final String producer;
-    final int year;
+    public final int year;
+    public double value;
 
     public Device(String model, String producer, int year) {
         this.model = model;

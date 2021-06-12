@@ -32,8 +32,8 @@ public class Main {
         Bro.setSalary(4500.0);
         System.out.println(Bro.getSalary());
 
-        Bro.setCar(car);
-        System.out.println(Bro.firstName + " has a car, and it is a freaking " + Bro.getCar());
+        Bro.setCar(car, 1);
+        System.out.println(Bro.firstName + " has a car, and it is a freaking " + Bro.getCar(0));
 
         Car car2 = new Diesel("360 spyder", "Ferrari", 2005, "Red");
         Car car3 = new Diesel("360 spyder", "Ferrari", 2005, "Red");
@@ -44,7 +44,7 @@ public class Main {
         Phone nokia1 = new Phone("6310i", "Nokia", 2000);
         System.out.println(nokia1);
         Bro.setSalary(1000.0);
-        Bro.setCar(car3);
+        Bro.setCar(car3,0);
         System.out.println(car3.value);
 
         nokia1.turnOn();
@@ -85,7 +85,16 @@ public class Main {
         URL url = new URL(" http://www.example.com/docs/resource1.html");
         nokia1.installAanApp(url);
 
-
+        car.value = 3000.0;
+        car3.value = 2750.0;
+        System.out.println(Bro.garageValue());
+        System.out.println(Bro.getCar(0));
+        System.out.println(Bro.getCar(1));
+        Bro.sort_Garage();
+        System.out.println(Bro.getCar(0));
+        System.out.println(Bro.getCar(1));
+        MsBro.cash += 200.0;
+        car3.sell(Bro, MsBro, 100.0);
 
 
     }
