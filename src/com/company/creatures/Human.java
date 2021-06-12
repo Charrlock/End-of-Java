@@ -83,9 +83,11 @@ public class Human extends Animal {
         else if (salary > car.value) {
             System.out.println("Car bought outright (for money).");
             garage[spot] = car;
+            car.owners.add(this);
         } else if (salary > car.value / 12) {
             System.out.println("Car bought by a loan.");
             garage[spot] = car;
+            car.owners.add(this);
         } else {
             System.out.println("You can not afford a car right now, get an education, a job or ask for a raise.");
         }

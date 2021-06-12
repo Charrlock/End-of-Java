@@ -95,6 +95,20 @@ public class Main {
         System.out.println(Bro.getCar(1));
         MsBro.cash += 200.0;
         car3.sell(Bro, MsBro, 100.0);
+        System.out.println(car3.had_the_car(Bro));
+        System.out.println(car3.had_the_car(MsBro));
+        System.out.println(car3.car_transactions_list());
+        System.out.println(car3.sold_the_car_to(MsBro, Bro));
+        System.out.println(car3.sold_the_car_to(Bro, MsBro));
+        car3.sell(MsBro, Bro, 100.0);
+        System.out.println(car3.car_transactions_list());
+        System.out.println( car3.sold_the_car_to(MsBro, Bro));
+        System.out.println(car3.sold_the_car_to(Bro, MsBro));
+        car.sell(Bro, MsBro, 50.0);
+        MsBro.setSalary(10000.0);
+        MsBro.setCar(car2, 1);
+        car2.sell(MsBro, Bro, 10.0);
+        car2.sell(Bro, MsBro, 10.0);
 
 
     }
