@@ -79,11 +79,11 @@ public class Main {
         lpg1.turnOn();
         lpg1.refuel();
 
-        nokia1.installAanApp("http://www.example.com/docs/resource1.html");
-        nokia1.installAanApp("egg", "egg");
-        nokia1.installAanApp("egg", "egg", "egg");
+        nokia1.installAnApp("http://www.example.com/docs/resource1.html");
+        nokia1.installAnApp("egg", "egg");
+        nokia1.installAnApp("egg", "egg", "egg");
         URL url = new URL(" http://www.example.com/docs/resource1.html");
-        nokia1.installAanApp(url);
+        nokia1.installAnApp(url);
 
         car.value = 3000.0;
         car3.value = 2750.0;
@@ -109,6 +109,24 @@ public class Main {
         MsBro.setCar(car2, 1);
         car2.sell(MsBro, Bro, 10.0);
         car2.sell(Bro, MsBro, 10.0);
+
+        nokia1.owner = Bro;
+        Application app1 = new Application("name1", "version1", 10.);
+        Application app2 = new Application("name2", "version2", 0.0);
+        Application app3 = new Application("name3", "version3", 10.0);
+        Application app4 = new Application("name4", "version4", 0.0);
+
+        nokia1.installApp(app1);
+        nokia1.installApp(app2);
+
+        System.out.println(nokia1.isAlreadyInstalled(app1));
+        System.out.println(nokia1.isAlreadyInstalled(app3));
+        nokia1.listFreeApps();
+        nokia1.listAppsByPrice();
+        nokia1.listApps();
+        System.out.println(nokia1.apps_installed);
+        System.out.println(nokia1.isAlreadyInstalled(app1));
+        System.out.println(nokia1.isAlreadyInstalled("name1"));
 
 
     }
